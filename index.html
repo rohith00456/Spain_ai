@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpineAI — AI-Powered Posture Corrector for India's IT Professionals</title>
+    <meta name="description"
+        content="SpineAI is a wearable AI posture corrector designed for India's IT professionals. Pre-book now at ₹499 and save ₹1,000.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦴</text></svg>">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+    <!-- Film Grain -->
+    <div class="grain-overlay"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+    <div class="cursor-drag-label" id="cursorDragLabel">drag</div>
+
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-logo">Spine<span>AI</span></div>
+        <div class="loader-bar">
+            <div class="loader-bar-fill"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="mainNav">
+        <a href="#" class="nav-logo">
+            <span class="logo-spine">Spine</span><span class="logo-ai">AI</span>
+        </a>
+        <div class="nav-links" id="navLinks">
+            <a href="#problem">Problem</a>
+            <a href="#product">Product</a>
+            <a href="#gallery">Design</a>
+            <a href="#technology">Tech</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#pricing" class="nav-cta">Pre-Book Now</a>
+        </div>
+        <div class="mobile-toggle" id="mobileToggle" onclick="toggleMobile()">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <!-- Background Video -->
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="first video_yoyo.mp4" type="video/mp4">
+        </video>
+        <div class="hero-video-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="pulse-dot"></span>
+                Pre-Launch — Limited Early Bird Slots
+            </div>
+            <h1 class="hero-title">
+                <span class="line">Your Spine's</span>
+                <span class="line"><span class="highlight">AI Guardian</span></span>
+            </h1>
+            <p class="hero-subtitle">
+                India's first AI-powered posture corrector wearable, inspired by biological precision. Engineered for IT
+                professionals. Reclaim your spine.
+            </p>
+            <div class="hero-ctas">
+                <a href="#pricing" class="btn-primary">
+                    Pre-Book Now <span>→</span>
+                </a>
+                <a href="#product" class="btn-secondary">
+                    Explore Product <span>↓</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-number" data-count="84">0%</div>
+                    <div class="hero-stat-label">IT Pros with Back Pain</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-number" data-count="30">0s</div>
+                    <div class="hero-stat-label">Slouch Detection Time</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-number" data-count="1999">₹0</div>
+                    <div class="hero-stat-label">Early Bird Price</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section" id="problem">
+        <!-- Background Video -->
+        <video class="problem-video" autoplay muted loop playsinline>
+            <source src="2nd video_yoyo.mp4" type="video/mp4">
+        </video>
+        <div class="problem-video-overlay"></div>
+
+        <div class="problem-content">
+            <div class="reveal">
+                <div class="section-label">The Problem</div>
+                <h2 class="section-title">Your Desk Is <span class="highlight">Destroying</span> Your Spine.</h2>
+                <p class="section-subtitle">India's 5 million+ IT professionals sit for an average of 9.3 hours daily —
+                    causing chronic pain, fatigue, and long-term spinal damage.</p>
+            </div>
+            <div class="problem-grid">
+                <div class="reveal-left">
+                    <div class="problem-image">
+                        <img src="problem_posture_hd.png" alt="IT professional with poor posture">
+                    </div>
+                </div>
+                <div class="reveal-right">
+                    <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 32px;">
+                        Prolonged sitting with poor posture leads to herniated discs, chronic neck pain, and reduced
+                        productivity. Most people don't realize they're slouching until the damage is done. SpineAI changes
+                        that — forever.
+                    </p>
+                    <div class="problem-stats">
+                        <div class="problem-stat">
+                            <div class="problem-stat-value">84%</div>
+                            <div class="problem-stat-text">IT workers report back pain</div>
+                        </div>
+                        <div class="problem-stat">
+                            <div class="problem-stat-value">₹15K+</div>
+                            <div class="problem-stat-text">Annual physio costs avg</div>
+                        </div>
+                        <div class="problem-stat">
+                            <div class="problem-stat-value">9.3hr</div>
+                            <div class="problem-stat-text">Avg daily sitting time</div>
+                        </div>
+                        <div class="problem-stat">
+                            <div class="problem-stat-value">62%</div>
+                            <div class="problem-stat-text">Productivity loss from pain</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section class="product-section" id="product">
+        <div class="reveal">
+            <div class="section-label">The Solution</div>
+            <h2 class="section-title">Meet <span class="highlight">SpineAI</span>. Your Wearable Posture Coach.</h2>
+            <p class="section-subtitle">A tiny, magnetic clip-on device that uses AI and motion sensing to keep your
+                posture perfect — all day, every day.</p>
+        </div>
+        <div class="product-showcase">
+            <div class="product-image-container reveal-scale">
+                <div class="product-glow"></div>
+                <img src="spineai_device.png" alt="SpineAI Device">
+            </div>
+            <div class="product-features reveal-right">
+                <div class="product-feature">
+                    <div class="feature-icon">🧲</div>
+                    <div>
+                        <div class="feature-title">Magnetic Collar Clip</div>
+                        <div class="feature-desc">Attaches magnetically to your shirt collar or an elastic body strap.
+                            Invisible under clothing, weighs just 12g.</div>
+                    </div>
+                </div>
+                <div class="product-feature">
+                    <div class="feature-icon">📐</div>
+                    <div>
+                        <div class="feature-title">MPU-6050 Sensor</div>
+                        <div class="feature-desc">Military-grade 6-axis motion sensor tracks your spine angle in
+                            real-time with sub-degree precision.</div>
+                    </div>
+                </div>
+                <div class="product-feature">
+                    <div class="feature-icon">📳</div>
+                    <div>
+                        <div class="feature-title">Smart Vibration Alerts</div>
+                        <div class="feature-desc">Gentle haptic buzz after 30 seconds of slouching. Trains your muscle
+                            memory without disrupting focus.</div>
+                    </div>
+                </div>
+                <div class="product-feature">
+                    <div class="feature-icon">🔋</div>
+                    <div>
+                        <div class="feature-title">14-Day Battery</div>
+                        <div class="feature-desc">Ultra-low power design runs for 2 full weeks on a single USB-C charge.
+                            Built to last your workweek.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Horizontal Gallery Section -->
+    <section class="horizontal-section" id="gallery">
+        <div class="horizontal-wrapper" id="horizontalWrapper">
+            <div class="horizontal-panel">
+                <div class="horizontal-panel-number">01</div>
+                <img src="2dc7671ad6088d3c831cb865294c6121.jpg" class="horizontal-panel-image" alt="Design inspiration">
+                <div class="horizontal-panel-content">
+                    <h2 class="section-title">Design <span class="highlight">Inspiration</span></h2>
+                    <p class="section-subtitle">Our design philosophy stems from biological efficiency — where form
+                        follows function perfectly.</p>
+                </div>
+            </div>
+            <div class="horizontal-panel">
+                <div class="horizontal-panel-number">02</div>
+                <div class="horizontal-panel-number" style="left: auto; right: 60px;">PRECISION</div>
+                <img src="e35830c735144026d9f2169218bfef3c.jpg" class="horizontal-panel-image" alt="Product philosophy">
+                <div class="horizontal-panel-content">
+                    <h2 class="section-title">The <span class="highlight">Spider-Sense</span></h2>
+                    <p class="section-subtitle">SpineAI acts as your biological alert system, giving you an edge in
+                        wellness and focus.</p>
+                </div>
+            </div>
+            <div class="horizontal-panel">
+                <div class="horizontal-panel-number">03</div>
+                <div class="horizontal-panel-number">TECH</div>
+                <img src="tech_sensor_hq.png" class="horizontal-panel-image" alt="Technology">
+                <div class="horizontal-panel-content">
+                    <h2 class="section-title">Advanced <span class="highlight">Engineering</span></h2>
+                    <p class="section-subtitle">Precision posture correction powered by aerospace-grade electronics.</p>
+                </div>
+            </div>
+            <div class="horizontal-panel">
+                <div class="horizontal-panel-number">04</div>
+                <div class="horizontal-panel-number" style="left: auto; right: 60px;">WELLNESS</div>
+                <img src="exercise_library.png" class="horizontal-panel-image" alt="Stretching">
+                <div class="horizontal-panel-content">
+                    <h2 class="section-title">Daily <span class="highlight">Performance</span></h2>
+                    <p class="section-subtitle">Every stretch brings you closer to your peak potential at the desk.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works (Redesigned Zigzag Layout) -->
+    <section class="howitworks-section" id="howitworks">
+        <div class="reveal" style="text-align: center; margin-bottom: 80px;">
+            <div class="section-label" style="justify-content: center;">How It Works</div>
+            <h2 class="section-title">The <span class="highlight">Three Steps</span> to Perfect Posture</h2>
+            <p class="section-subtitle" style="margin: 0 auto;">SpineAI integrates seamlessly into your life. Connect it
+                once, and let the AI build your biological efficiency.</p>
+        </div>
+
+        <!-- Step 1 -->
+        <div class="zigzag-row">
+            <div class="zigzag-text reveal-left">
+                <div class="zigzag-overline">STEP 01 — CLIP & CALIBRATE</div>
+                <h3 class="zigzag-title">Set Your Foundation</h3>
+                <p class="zigzag-desc">Snap SpineAI onto your collar. In just 10 seconds, it establishes your unique
+                    baseline and gets to work immediately — invisible but always active.</p>
+                <ul class="zigzag-list">
+                    <li>Magnetic clip attaches seamlessly to any clothing</li>
+                    <li>Instant 10-second auto-calibration</li>
+                    <li>Weighs 12g — absolutely physically imperceptible</li>
+                </ul>
+            </div>
+            <div class="zigzag-visual reveal-right">
+                <div class="blob-bg blob-1"></div>
+                <img src="spineai_device.png" alt="Device" class="floating-image zoom-float">
+            </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="zigzag-row reverse">
+            <div class="zigzag-text reveal-right">
+                <div class="zigzag-overline">STEP 02 — THE AI MONITOR</div>
+                <h3 class="zigzag-title">Predictive Correction</h3>
+                <p class="zigzag-desc">Continuous 6-axis tracking maps your spine. When you slouch for over 30 seconds,
+                    a gentle vibration nudges you to correct your posture.</p>
+                <ul class="zigzag-list">
+                    <li>Detects slouching thresholds dynamically</li>
+                    <li>Gentle haptic feedback trains muscle memory</li>
+                    <li>Zero noise, zero disruption to your flow</li>
+                </ul>
+            </div>
+            <div class="zigzag-visual reveal-left">
+                <div class="blob-bg blob-2"></div>
+                <div class="glass-ui-card floating-card bounce-float">
+                    <div class="card-header">
+                        <div class="card-icon">⚡</div>
+                        <div>Postural Alignment</div>
+                        <div style="margin-left: auto; color: var(--accent); font-weight: 700;">Active</div>
+                    </div>
+                    <div class="card-chart">
+                        <div class="trend-bar" style="height: 80%"></div>
+                        <div class="trend-bar" style="height: 60%"></div>
+                        <div class="trend-bar" style="height: 45%"></div>
+                        <div class="trend-bar slouch" style="height: 25%"></div>
+                        <div class="trend-bar" style="height: 70%"></div>
+                        <div class="trend-bar" style="height: 90%"></div>
+                    </div>
+                    <div class="card-footer">
+                        <span>Haptic Nudge Triggered</span>
+                        <span class="card-value">-42°</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="zigzag-row">
+            <div class="zigzag-text reveal-left">
+                <div class="zigzag-overline">STEP 03 — TRACK & IMPROVE</div>
+                <h3 class="zigzag-title">Your Living Posture Timeline</h3>
+                <p class="zigzag-desc">Your posture profile never stops growing smarter. Earn milestones, uncover
+                    physical blindspots, and see undeniable proof of your progress.</p>
+                <ul class="zigzag-list">
+                    <li>Daily and weekly posture score trends</li>
+                    <li>Tailored 5-minute desk exercises based on your metrics</li>
+                    <li>Earn badges and view detailed timeline history</li>
+                </ul>
+            </div>
+            <div class="zigzag-visual reveal-right">
+                <div class="blob-bg blob-3"></div>
+                <div class="phone-mockup-card floating-card zoom-float">
+                    <div class="phone-header">
+                        <div class="phone-status">
+                            <span class="wifi-dot"></span>
+                            <span>SpineAI Active</span>
+                        </div>
+                        <div class="phone-time">12:30 PM</div>
+                    </div>
+                    <div class="phone-app-content">
+                        <div class="app-score-section">
+                            <div class="score-circle">
+                                <svg viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="40" class="circle-bg"></circle>
+                                    <circle cx="50" cy="50" r="40" class="circle-fill"></circle>
+                                </svg>
+                                <div class="score-text">
+                                    <div class="score-num">87%</div>
+                                    <div class="score-label">Score</div>
+                                </div>
+                            </div>
+                            <div class="score-details">
+                                <div class="score-status">Excellent</div>
+                                <div class="score-session">Session: 4h 12m</div>
+                            </div>
+                        </div>
+                        
+                        <div class="app-widget">
+                            <div class="widget-title">Posture Timeline</div>
+                            <div class="timeline-mini-chart">
+                                <div class="t-bar" style="height: 70%"></div>
+                                <div class="t-bar" style="height: 85%"></div>
+                                <div class="t-bar" style="height: 90%"></div>
+                                <div class="t-bar warning" style="height: 45%"></div>
+                                <div class="t-bar" style="height: 80%"></div>
+                                <div class="t-bar" style="height: 95%"></div>
+                            </div>
+                        </div>
+
+                        <div class="app-exercise-recommendation">
+                            <div class="recommendation-header">
+                                <span>Tailored Stretching</span>
+                                <span class="play-btn">▶</span>
+                            </div>
+                            <div class="recommendation-title">Thoracic Extension</div>
+                            <div class="recommendation-duration">5-Min Desk Break</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Video Demo Section -->
+    <section class="demo-video-section" id="demo-video">
+        <div class="reveal" style="text-align: center; margin-bottom: 80px;">
+            <div class="section-label" style="justify-content: center;">Product Demo</div>
+            <h2 class="section-title">See <span class="highlight">SpineAI</span> in Action</h2>
+            <p class="section-subtitle" style="margin: 0 auto;">Watch how SpineAI detects posture anomalies, keeps you comfortable, and logs metrics in real-time.</p>
+        </div>
+
+        <div class="demo-video-container">
+            <!-- Curved connecting S-path background -->
+            <div class="demo-svg-path-bg">
+                <svg viewBox="0 0 1000 2100" preserveAspectRatio="none">
+                    <path class="base-path" d="M 250,150 Q 850,450 500,750 T 750,1350 T 250,1950" fill="none" stroke="rgba(21, 101, 192, 0.1)" stroke-width="4" stroke-linecap="round" stroke-dasharray="12,12" />
+                    <path class="draw-path" d="M 250,150 Q 850,450 500,750 T 750,1350 T 250,1950" fill="none" stroke="var(--accent)" stroke-width="4" stroke-linecap="round" stroke-dasharray="12,12" />
+                </svg>
+            </div>
+
+            <!-- Absolute Path Travelers (Transformation Person) -->
+            <div class="path-travelers-group">
+                <img id="posture-traveler-img" class="traveler-person-img" src="frames/frame_001.webp" alt="Posture Transformation">
+                <div id="posture-traveler-age" class="traveler-age-label">Age 27</div>
+            </div>
+
+            <!-- Row 1: Video 1 (How It Helps) -->
+            <div class="demo-video-row row-1">
+                <div class="demo-video-visual reveal-left">
+                    <div class="video-player-wrapper">
+                        <video class="demo-video" autoplay loop muted playsinline>
+                            <source src="main video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <div class="demo-video-text reveal-right">
+                    <div class="demo-row-overline">VIDEO 01 — POSTURE ALIGNMENT</div>
+                    <h3 class="demo-row-title">Alleviate Pain & Build Alignment</h3>
+                    <p class="demo-row-desc">Designed to relieve desk-induced back and neck pain. SpineAI continuously maps your upper back curvature, triggering gentle haptic reminders when you slouch for 30 seconds. Over time, it trains physical muscle memory, reducing muscle fatigue and keeping your posture upright naturally.</p>
+                    <ul class="demo-row-list">
+                        <li>Eliminates chronic back and neck strain</li>
+                        <li>Corrects slouching threshold in real-time</li>
+                        <li>Alleviates muscular tension and head-forward posture</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Row 2: Video 2 (Comfortable Wearing) -->
+            <div class="demo-video-row row-2 reverse">
+                <div class="demo-video-visual reveal-right">
+                    <div class="video-player-wrapper">
+                        <video class="demo-video" autoplay loop muted playsinline>
+                            <source src="main 2nd video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <div class="demo-video-text reveal-left">
+                    <div class="demo-row-overline">VIDEO 02 — COMFORTABLE WEARING</div>
+                    <h3 class="demo-row-title">Zero Physical Footprint</h3>
+                    <p class="demo-row-desc">Engineered to fit seamlessly into any outfit. Weighing just 12 grams, the magnetic device is physical imperceptible when clipped onto your collar, undergarment, or shirt. It features soft-touch hypoallergenic medical-grade polymer, ensuring absolute skin comfort throughout long workdays.</p>
+                    <ul class="demo-row-list">
+                        <li>12g ultra-lightweight design</li>
+                        <li>Magnetic clip holds securely to any fabric</li>
+                        <li>Physical invisible under business casuals</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Row 3: Video 3 (App Preview) -->
+            <div class="demo-video-row row-3">
+                <div class="demo-video-visual reveal-left">
+                    <div class="video-player-wrapper">
+                        <video class="demo-video" autoplay loop muted playsinline>
+                            <source src="main 3 video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <div class="demo-video-text reveal-right">
+                    <div class="demo-row-overline">VIDEO 03 — COMPANION APP</div>
+                    <h3 class="demo-row-title">Advanced Physical Analytics</h3>
+                    <p class="demo-row-desc">Your posture data in a living dashboard. The companion app connects via Bluetooth, offering real-time postural score tracking, weekly physical trends, and gamified streak achievements. Receive tailored, 5-minute desk exercises based on your physical metrics to target slouch areas.</p>
+                    <ul class="demo-row-list">
+                        <li>Real-time 0-100 posture score tracking</li>
+                        <li>Tailored stretching exercises & history timelines</li>
+                        <li>Gamified posture streaks and physical milestones</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Final Tagline -->
+        <div class="demo-final-tagline reveal">
+            <div class="tagline-glow"></div>
+            <p class="tagline-text">
+                "Sit smart in your 20s.<br>
+                Move the world in your 50s —<br>
+                without anyone's help."
+            </p>
+            <div class="tagline-author">— SpineAI</div>
+        </div>
+    </section>
+
+    <!-- App Section -->
+    <section class="app-section" id="app">
+        <div class="reveal">
+            <div class="section-label">Companion App</div>
+            <h2 class="section-title">Your Posture <span class="highlight">Dashboard</span></h2>
+            <p class="section-subtitle">A powerful companion app that turns raw sensor data into actionable insights for
+                your spine health.</p>
+        </div>
+        <div class="app-showcase">
+            <div class="app-mockup reveal-left">
+                <img src="app_mockup.png" alt="SpineAI Companion App">
+            </div>
+            <div class="app-features-list reveal-right">
+                <div class="app-feature-item">
+                    <div class="app-feature-icon">📊</div>
+                    <div>
+                        <div class="app-feature-title">Daily Posture Score</div>
+                        <div class="app-feature-desc">Get a 0-100 score based on your posture throughout the day. See
+                            trends and set improvement goals.</div>
+                    </div>
+                </div>
+                <div class="app-feature-item">
+                    <div class="app-feature-icon">📈</div>
+                    <div>
+                        <div class="app-feature-title">Timeline & History</div>
+                        <div class="app-feature-desc">Detailed timeline showing when you slouched, for how long, and
+                            your improvement over weeks and months.</div>
+                    </div>
+                </div>
+                <div class="app-feature-item">
+                    <div class="app-feature-icon">🏋️</div>
+                    <div>
+                        <div class="app-feature-title">Exercise Library</div>
+                        <div class="app-feature-desc">Video-guided stretches and exercises tailored to your specific
+                            posture issues. 5-minute desk workouts.</div>
+                    </div>
+                </div>
+                <div class="app-feature-item">
+                    <div class="app-feature-icon">🏆</div>
+                    <div>
+                        <div class="app-feature-title">Gamification</div>
+                        <div class="app-feature-desc">Earn streak badges, compete with colleagues, and unlock
+                            achievements as your posture improves.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section" id="reviews">
+        <div class="reviews-container">
+            <!-- Left Column: Title and Call to Action -->
+            <div class="reviews-left reveal-left">
+                <h2 class="reviews-big-title">WHAT<br>THEY<br>SAY</h2>
+                <p class="reviews-subtitle-desc">
+                    IT professionals, designers, and physiotherapists across India are reclaiming their spine health with SpineAI. Here's what they say about their journey.
+                </p>
+                <div class="reviews-cta-container">
+                    <a href="#pricing" class="btn-primary">
+                        Join 10k+ Active Users <span>→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Center Column: Card Deck -->
+            <div class="reviews-center">
+                <div class="reviews-card-deck" id="reviewsCardDeck">
+                    <!-- Card 1: Rajesh -->
+                    <div class="review-card" data-index="0" style="--card-color: #8F8CF2; --card-rotate: -4deg; --card-x: -12px; --card-y: 10px;">
+                        <div class="card-top">
+                            <span class="card-badge badge-category">Workplace</span>
+                            <span class="card-badge badge-rating">⭐⭐⭐⭐⭐ 5.0</span>
+                        </div>
+                        <div class="card-image-wrap">
+                            <img src="review_rajesh.png" alt="Rajesh K." style="object-position: top;">
+                        </div>
+                        <div class="card-content-area">
+                            <div class="card-meta">
+                                <span class="card-time">2 hours ago</span>
+                            </div>
+                            <h3 class="card-review-title">"The haptic nudge is a total game-changer"</h3>
+                            <p class="card-review-text">"I used to sit slouched for hours without realizing. The haptic vibration is extremely gentle but immediately trains your muscle memory. My lower back pain is completely gone after just two weeks of use!"</p>
+                            <div class="card-footer-info">
+                                <div class="reviewer-name">Rajesh K.</div>
+                                <div class="reviewer-role">Software Engineer, Bangalore</div>
+                                <div class="card-arrow-btn">
+                                    <svg viewBox="0 0 24 24" width="24" height="24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Priya -->
+                    <div class="review-card" data-index="1" style="--card-color: #F28CA3; --card-rotate: 2deg; --card-x: 6px; --card-y: -6px;">
+                        <div class="card-top">
+                            <span class="card-badge badge-category">Daily Design</span>
+                            <span class="card-badge badge-rating">⭐⭐⭐⭐⭐ 5.0</span>
+                        </div>
+                        <div class="card-image-wrap">
+                            <img src="review_priya.png" alt="Priya M." style="object-position: top;">
+                        </div>
+                        <div class="card-content-area">
+                            <div class="card-meta">
+                                <span class="card-time">1 day ago</span>
+                            </div>
+                            <h3 class="card-review-title">"Absolutely invisible under my shirt"</h3>
+                            <p class="card-review-text">"As a designer, I sit at my drawing tablet for hours. SpineAI is so light at 12g, and the magnetic clip holds onto my top securely. Nobody even notices I'm wearing it, but it keeps my spine perfect."</p>
+                            <div class="card-footer-info">
+                                <div class="reviewer-name">Priya M.</div>
+                                <div class="reviewer-role">UI/UX Designer, Hyderabad</div>
+                                <div class="card-arrow-btn">
+                                    <svg viewBox="0 0 24 24" width="24" height="24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Amit -->
+                    <div class="review-card" data-index="2" style="--card-color: #7CE6A8; --card-rotate: -2deg; --card-x: -4px; --card-y: -2px;">
+                        <div class="card-top">
+                            <span class="card-badge badge-category">Clinical Wellness</span>
+                            <span class="card-badge badge-rating">⭐⭐⭐⭐⭐ 5.0</span>
+                        </div>
+                        <div class="card-image-wrap">
+                            <img src="review_amit.png" alt="Dr. Amit V." style="object-position: top;">
+                        </div>
+                        <div class="card-content-area">
+                            <div class="card-meta">
+                                <span class="card-time">3 days ago</span>
+                            </div>
+                            <h3 class="card-review-title">"Highly recommended for desk workers"</h3>
+                            <p class="card-review-text">"Many of my patients come in with thoracic pain. They try stretching, but revert to slouching. SpineAI provides the constant, real-time biofeedback required to make long-term behavioral changes."</p>
+                            <div class="card-footer-info">
+                                <div class="reviewer-name">Dr. Amit V.</div>
+                                <div class="reviewer-role">Physiotherapist, Mumbai</div>
+                                <div class="card-arrow-btn">
+                                    <svg viewBox="0 0 24 24" width="24" height="24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Vikram -->
+                    <div class="review-card" data-index="3" style="--card-color: #7CD4E6; --card-rotate: 5deg; --card-x: 10px; --card-y: 8px;">
+                        <div class="card-top">
+                            <span class="card-badge badge-category">Productivity</span>
+                            <span class="card-badge badge-rating">⭐⭐⭐⭐⭐ 5.0</span>
+                        </div>
+                        <div class="card-image-wrap">
+                            <img src="review_vikram.png" alt="Vikram S." style="object-position: top;">
+                        </div>
+                        <div class="card-content-area">
+                            <div class="card-meta">
+                                <span class="card-time">5 days ago</span>
+                            </div>
+                            <h3 class="card-review-title">"Feel much more energetic and focused"</h3>
+                            <p class="card-review-text">"I didn't realize how much poor posture drained my energy levels during long coding sessions. Since wearing SpineAI, I have zero neck fatigue, and I feel significantly more focused at the end of the day."</p>
+                            <div class="card-footer-info">
+                                <div class="reviewer-name">Vikram S.</div>
+                                <div class="reviewer-role">Engineering Lead, Noida</div>
+                                <div class="card-arrow-btn">
+                                    <svg viewBox="0 0 24 24" width="24" height="24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Interactive Tag/Benefit List -->
+            <div class="reviews-right reveal-right">
+                <div class="reviews-tag-list" id="reviewsTagList">
+                    <div class="reviews-tag-item active" data-index="0">
+                        <span class="tag-number">01</span>
+                        <span class="tag-text">PAIN RELIEF</span>
+                        <svg class="brush-stroke" viewBox="0 0 200 40" preserveAspectRatio="none">
+                            <path d="M5,20 Q50,5 100,20 T195,20" fill="none" stroke="#8F8CF2" stroke-width="8" stroke-linecap="round" opacity="0.45"/>
+                        </svg>
+                    </div>
+                    <div class="reviews-tag-item" data-index="1">
+                        <span class="tag-number">02</span>
+                        <span class="tag-text">DAILY COMFORT</span>
+                        <svg class="brush-stroke" viewBox="0 0 200 40" preserveAspectRatio="none">
+                            <path d="M5,20 Q50,5 100,20 T195,20" fill="none" stroke="#F28CA3" stroke-width="8" stroke-linecap="round" opacity="0.45"/>
+                        </svg>
+                    </div>
+                    <div class="reviews-tag-item" data-index="2">
+                        <span class="tag-number">03</span>
+                        <span class="tag-text">CLINICAL BACKING</span>
+                        <svg class="brush-stroke" viewBox="0 0 200 40" preserveAspectRatio="none">
+                            <path d="M5,20 Q50,5 100,20 T195,20" fill="none" stroke="#7CE6A8" stroke-width="8" stroke-linecap="round" opacity="0.45"/>
+                        </svg>
+                    </div>
+                    <div class="reviews-tag-item" data-index="3">
+                        <span class="tag-number">04</span>
+                        <span class="tag-text">PRODUCTIVITY</span>
+                        <svg class="brush-stroke" viewBox="0 0 200 40" preserveAspectRatio="none">
+                            <path d="M5,20 Q50,5 100,20 T195,20" fill="none" stroke="#7CD4E6" stroke-width="8" stroke-linecap="round" opacity="0.45"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="tech-section" id="technology">
+        <div class="reveal">
+            <div class="section-label">Technology</div>
+            <h2 class="section-title">Precision <span class="highlight">Engineering</span></h2>
+            <p class="section-subtitle">Built with aerospace-grade sensors and intelligent algorithms that adapt to your
+                body.</p>
+        </div>
+        <div class="tech-grid">
+            <div class="tech-card reveal" style="transition-delay:0s;">
+                <div class="tech-icon">⚡</div>
+                <div class="tech-card-title">MPU-6050 IMU</div>
+                <div class="tech-card-desc">6-axis inertial measurement unit with 3-axis gyroscope and 3-axis
+                    accelerometer for sub-degree posture tracking.</div>
+            </div>
+            <div class="tech-card reveal" style="transition-delay:0.1s;">
+                <div class="tech-icon">🧠</div>
+                <div class="tech-card-title">Edge AI Processing</div>
+                <div class="tech-card-desc">On-device machine learning classifies posture in real-time without cloud
+                    dependency. Zero latency correction.</div>
+            </div>
+            <div class="tech-card reveal" style="transition-delay:0.2s;">
+                <div class="tech-icon">📡</div>
+                <div class="tech-card-title">BLE 5.0 Connectivity</div>
+                <div class="tech-card-desc">Low-energy Bluetooth syncs data seamlessly with your smartphone. Always
+                    connected, never draining.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+        <!-- Decorative background blobs -->
+        <div class="pricing-blob blob-pricing-1"></div>
+        <div class="pricing-blob blob-pricing-2"></div>
+        <div class="pricing-blob blob-pricing-3"></div>
+
+        <div class="reveal">
+            <div class="section-label">Pricing</div>
+            <h2 class="section-title">Invest In Your <span class="highlight">Spine Health</span></h2>
+            <p class="section-subtitle">Choose a plan that fits your lifestyle. Early bird pricing won't last forever.
+            </p>
+        </div>
+        <div class="pricing-grid">
+            <div class="pricing-card reveal" style="transition-delay:0s;">
+                <div class="pricing-tag">Early Bird</div>
+                <div class="pricing-amount"><span class="currency">₹</span>1,999</div>
+                <div class="pricing-period">One-time device cost</div>
+                <ul class="pricing-features">
+                    <li>
+                        <span class="check-wrapper">
+                            <svg class="check-icon" width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="10" cy="10" r="9" fill="var(--accent-glow)" stroke="rgba(21, 101, 192, 0.15)" stroke-width="1.5"/>
+                                <path d="M6.5 10L9 12.5L13.5 8" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        Pay ₹499 deposit now
+                    </li>
+                    <li>
+                        <span class="check-wrapper">
+                            <svg class="check-icon" width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="10" cy="10" r="9" fill="var(--accent-glow)" stroke="rgba(21, 101, 192, 0.15)" stroke-width="1.5"/>
+                                <path d="M6.5 10L9 12.5L13.5 8" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        ₹1,500 on delivery
+                    </li>
+                    <li>
+                        <span class="check-wrapper">
+                            <svg class="check-icon" width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="10" cy="10" r="9" fill="var(--accent-glow)" stroke="rgba(21, 101, 192, 0.15)" stroke-width="1.5"/>
+                                <path d="M6.5 10L9 12.5L13.5 8" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        Save ₹1,000 off launch price
+                    </li>
+                    <li>
+                        <span class="check-wrapper">
+                            <svg class="check-icon" width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="10" cy="10" r="9" fill="var(--accent-glow)" stroke="rgba(21, 101, 192, 0.15)" stroke-width="1.5"/>
+                                <path d="M6.5 10L9 12.5L13.5 8" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        3 months free app subscription
+                    </li>
+                    <li>
+                        <span class="check-wrapper">
+                            <svg class="check-icon" width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="10" cy="10" r="9" fill="var(--accent-glow)" stroke="rgba(21, 101, 192, 0.15)" stroke-width="1.5"/>
+                                <path d="M6.5 10L9 12.5L13.5 8" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        Priority shipping (first batch)
+                    </li>
+                </ul>
+                <button class="pricing-btn pricing-btn-primary" onclick="openBooking()">Pre-Book Now</button>
+            </div>
+            <div class="pricing-card featured reveal" style="transition-delay:0.15s;">
+                <div class="pricing-tag">Launch Price</div>
+                <div class="pricing-amount"><span class="currency">₹</span>2,999</div>
+                <div class="pricing-period">One-time device cost</div>
+                <ul class="pricing-features">
+                    <li>
+                        <span class="check-wrapper">
+                            <svg class="check-icon" width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="10" cy="10" r="9" fill="var(--accent-glow)" stroke="rgba(21, 101, 192, 0.15)" stroke-width="1.5"/>
+                                <path d="M6.5 10L9 12.5L13.5 8" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        Full payment at purchase
+                    </li>
+                    <li>
+                        <span class="check-wrapper">
+                            <svg class="check-icon" width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="10" cy="10" r="9" fill="var(--accent-glow)" stroke="rgba(21, 101, 192, 0.15)" stroke-width="1.5"/>
+                                <path d="M6.5 10L9 12.5L13.5 8" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        SpineAI device + charger
+                    </li>
+                    <li>
+                        <span class="check-wrapper">
+                            <svg class="check-icon" width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="10" cy="10" r="9" fill="var(--accent-glow)" stroke="rgba(21, 101, 192, 0.15)" stroke-width="1.5"/>
+                                <path d="M6.5 10L9 12.5L13.5 8" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        1 month free subscription
+                    </li>
+                    <li>
+                        <span class="check-wrapper">
+                            <svg class="check-icon" width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="10" cy="10" r="9" fill="var(--accent-glow)" stroke="rgba(21, 101, 192, 0.15)" stroke-width="1.5"/>
+                                <path d="M6.5 10L9 12.5L13.5 8" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        1 year hardware warranty
+                    </li>
+                </ul>
+                <button class="pricing-btn pricing-btn-primary" onclick="openBooking()">Pre-Book Now</button>
+            </div>
+            <div class="pricing-card reveal" style="transition-delay:0.3s;">
+                <div class="pricing-tag">App Subscription</div>
+                <div class="pricing-amount"><span class="currency">₹</span>99</div>
+                <div class="pricing-period">/month or ₹799/year</div>
+                <ul class="pricing-features">
+                    <li>
+                        <span class="check-wrapper">
+                            <svg class="check-icon" width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="10" cy="10" r="9" fill="var(--accent-glow)" stroke="rgba(21, 101, 192, 0.15)" stroke-width="1.5"/>
+                                <path d="M6.5 10L9 12.5L13.5 8" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        Daily posture score
+                    </li>
+                    <li>
+                        <span class="check-wrapper">
+                            <svg class="check-icon" width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="10" cy="10" r="9" fill="var(--accent-glow)" stroke="rgba(21, 101, 192, 0.15)" stroke-width="1.5"/>
+                                <path d="M6.5 10L9 12.5L13.5 8" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        Full history & analytics
+                    </li>
+                    <li>
+                        <span class="check-wrapper">
+                            <svg class="check-icon" width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="10" cy="10" r="9" fill="var(--accent-glow)" stroke="rgba(21, 101, 192, 0.15)" stroke-width="1.5"/>
+                                <path d="M6.5 10L9 12.5L13.5 8" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        Exercise video library
+                    </li>
+                    <li>
+                        <span class="check-wrapper">
+                            <svg class="check-icon" width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="10" cy="10" r="9" fill="var(--accent-glow)" stroke="rgba(21, 101, 192, 0.15)" stroke-width="1.5"/>
+                                <path d="M6.5 10L9 12.5L13.5 8" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        Smart reminders
+                    </li>
+                </ul>
+                <button class="pricing-btn pricing-btn-secondary" onclick="openBooking()">Get Started</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section" id="faq">
+        <!-- Background Video -->
+        <video class="faq-video" autoplay muted loop playsinline>
+            <source src="qae video_yoyo.mp4" type="video/mp4">
+        </video>
+        <div class="faq-video-overlay"></div>
+
+        <div class="faq-content">
+            <div class="reveal">
+                <div class="section-label">FAQ</div>
+                <h2 class="section-title">Got <span class="highlight">Questions?</span></h2>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        How does SpineAI detect poor posture?
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>SpineAI uses an MPU-6050 inertial measurement unit to measure your spine's tilt angle in
+                            real-time. When you slouch beyond your threshold for more than 30 seconds, it triggers a gentle
+                            vibration.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        Is the device comfortable?
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. SpineAI weighs just 12 grams — lighter than two coins. It's designed for all-day
+                            comfort and is virtually invisible under clothing.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        How long does the battery last and how do I charge it?
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>SpineAI features an ultra-low power design that gives you up to 14 days of battery life on a single charge. It charges fully in under 2 hours via a standard USB-C port.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        Can I use it while working out or running?
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>While SpineAI is optimized for desk posture tracking, it can be worn during light physical activities. You can temporarily pause alerts through the companion app to prevent vibrations during active workouts.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        Does the device work offline without the companion app?
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, absolutely. SpineAI performs all posture classification and haptic correction alerts using its built-in Edge AI chip. It will sync your posture history to the app once it reconnects via Bluetooth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="cta">
+        <!-- Background Video -->
+        <video class="cta-video" autoplay muted loop playsinline>
+            <source src="4 th video_yoyo.mp4" type="video/mp4">
+        </video>
+        <div class="cta-video-overlay"></div>
+
+        <div class="cta-content reveal">
+            <div class="section-label" style="justify-content: center;">Limited Offer</div>
+            <h2 class="cta-title">Ready to Fix Your <span class="highlight">Posture?</span></h2>
+            <p class="cta-subtitle">Join 2,400+ IT professionals who've already pre-booked.</p>
+            <div class="cta-price">
+                <div class="cta-price-label">Early Bird Price</div>
+                <div class="cta-price-amount">₹1,999</div>
+                <div class="cta-price-detail">Just ₹499 deposit • ₹1,500 on delivery</div>
+            </div>
+            <br>
+            <a href="#pricing" class="btn-primary"
+                style="font-size: 1rem; padding: 18px 48px;">
+                Pre-Book Now — Only ₹499 <span>→</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-brand-name"><span class="highlight">Spine</span>AI</div>
+                <p class="footer-desc">India's first AI-powered posture corrector wearable.</p>
+            </div>
+            <div>
+                <div class="footer-heading">Product</div>
+                <ul class="footer-links">
+                    <li><a href="#product">Features</a></li>
+                    <li><a href="#technology">Technology</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="footer-heading">Support</div>
+                <ul class="footer-links">
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-copy">© 2026 SpineAI. All rights reserved. Made in India 🇮🇳</div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div class="booking-modal" id="bookingModal">
+        <div class="booking-form-container">
+            <button class="booking-close" onclick="closeBooking()">✕</button>
+            
+            <!-- Form Screen -->
+            <div id="bookingFormScreen">
+                <div class="booking-form-title">Reserve Your <span style="color:var(--accent)">SpineAI</span></div>
+                <div class="booking-form-subtitle">Pay just ₹499 to secure your early bird spot. Remaining ₹1,500 on delivery.</div>
+                <form id="bookingForm" onsubmit="handleBooking(event)">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" name="email" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required>
+                    </div>
+                    <button type="submit" class="form-submit">Confirm Pre-Booking — ₹499</button>
+                </form>
+            </div>
+
+            <!-- Success Screen -->
+            <div id="bookingSuccessScreen" style="display: none; text-align: center; padding: 30px 0; position: relative; z-index: 2;">
+                <!-- Confetti particles inside container -->
+                <div class="success-confetti-container">
+                    <div class="confetti" style="background: #F28CA3; left: 8%; --delay: 0s; --speed: 2.5s;"></div>
+                    <div class="confetti" style="background: #8F8CF2; left: 22%; --delay: 0.4s; --speed: 3.2s;"></div>
+                    <div class="confetti" style="background: #7CE6A8; left: 38%; --delay: 0.15s; --speed: 2.8s;"></div>
+                    <div class="confetti" style="background: #7CD4E6; left: 55%; --delay: 0.6s; --speed: 3.5s;"></div>
+                    <div class="confetti" style="background: #FFDE4D; left: 72%; --delay: 0.08s; --speed: 3s;"></div>
+                    <div class="confetti" style="background: #8F8CF2; left: 88%; --delay: 0.3s; --speed: 3.8s;"></div>
+                    <div class="confetti" style="background: #F28CA3; left: 45%; --delay: 0.8s; --speed: 3.1s;"></div>
+                </div>
+
+                <div class="success-glow-effect"></div>
+                
+                <div class="success-icon-bounce" style="font-size: 4rem; margin-bottom: 20px; display: inline-block; position: relative; z-index: 5;">🎉</div>
+                
+                <h3 class="success-gradient-title">Pre-booking Successful!</h3>
+                
+                <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.6; margin-bottom: 28px; max-width: 340px; margin-left: auto; margin-right: auto; position: relative; z-index: 5; font-weight: 500;">
+                    Thank you! Your early bird spot is secured. Our team will call you soon to confirm your details.
+                </p>
+                
+                <button class="btn-primary success-btn-glow" onclick="closeBooking()" style="padding: 12px 40px; font-size: 0.9rem; border-radius: 100px; position: relative; z-index: 5;">
+                    Great, Thanks!
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
