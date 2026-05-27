@@ -48,7 +48,7 @@ function initLoader() {
                 ScrollTrigger.refresh();
             }
         });
-    }, 1800);
+    }, 1000);
 }
 
 // ------- Custom Cursor -------
